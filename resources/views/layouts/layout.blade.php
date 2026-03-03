@@ -11,10 +11,11 @@
     <title>@yield('title')</title>
 </head>
 <body class="flex flex-col min-h-screen">
+
     @include('components.social-link')
     @include('components.header')
     @include('components.banner')
-    
+
 
     {{-- Nội dung chính --}}
     <main class="flex-grow">
@@ -22,6 +23,7 @@
         ĐÂY LÀ NỘI DUNG CHÍNH
     </main>
 
+    @include('components.play-control-background')
     @include('components.rimager-wrapper')
     @include('components.footer')
 

@@ -1,4 +1,4 @@
-<div class="relative bg-black text-white text-sm">
+<div class="relative bg-black text-white text-xs">
     <div class="max-w-8xl mx-auto px-6 py-2 flex items-center justify-between">
 
         <!-- Left: Social Icons -->
@@ -26,7 +26,6 @@
             </a>
 
             <!-- Dropdown -->
-
         </div>
     </div>
 </div>
