@@ -2,26 +2,26 @@
     // Cấu hình từng banner: đường dẫn ảnh + vị trí chữ
     $banners = [
         [
-            'src'       => 'images/25.jpg',
-            'position'  => 'left-center',   // chữ bên trái, giữa chiều cao
+            'src' => 'images/25.jpg',
+            'position' => 'left-center', // chữ bên trái, giữa chiều cao
         ],
         [
-            'src'       => 'images/28.jpg',
-            'position'  => 'left-center',   // chữ bên trái, giữa chiều cao
+            'src' => 'images/28.jpg',
+            'position' => 'left-center', // chữ bên trái, giữa chiều cao
         ],
         [
-            'src'       => 'images/PC_8da43406-6289-4e3e-a6fe-45954473a5b4.jpg',
-            'position'  => 'bottom-right',  // chữ phía dưới, bên phải (gần đĩa xoay)
+            'src' => 'images/PC_8da43406-6289-4e3e-a6fe-45954473a5b4.jpg',
+            'position' => 'bottom-right', // chữ phía dưới, bên phải (gần đĩa xoay)
         ],
     ];
 
-    // Hàm nhỏ để map position -> class Tailwind
-    function bannerTextPositionClass($position) {
+    function bannerTextPositionClass($position)
+    {
         return match ($position) {
-            'left-center'  => 'items-center justify-start pl-10 md:pl-20 lg:pl-28',
+            'left-center' => 'items-center justify-start pl-10 md:pl-20 lg:pl-28',
             'bottom-right' => 'items-center justify-end pr-6 md:pr-12',
-            'price-right'  => 'items-start justify-end pt-12 md:pt-24 pr-10 md:pr-20',
-            default        => 'items-center justify-center',
+            'price-right' => 'items-start justify-end pt-12 md:pt-24 pr-10 md:pr-20',
+            default => 'items-center justify-center',
         };
     }
 @endphp
@@ -30,20 +30,17 @@
     {{-- Hiển thị ảnh banner --}}
     <div class="relative w-full" data-banner>
         @foreach ($banners as $index => $banner)
-            <div
-                class="relative w-full transition-opacity duration-700 ease-in-out
+            <div class="relative w-full transition-opacity duration-700 ease-in-out
                        {{ $index === 0 ? 'opacity-100 z-10 block' : 'opacity-0 z-0 hidden' }}"
                 data-banner-slide="{{ $index }}">
-                <img
-                    src="{{ asset($banner['src']) }}"
-                    alt="Banner {{ $index + 1 }}"
+                <img src="{{ asset($banner['src']) }}" alt="Banner {{ $index + 1 }}"
                     class="w-full h-auto object-contain">
 
                 {{-- Overlay nội dung vị trí phụ thuộc từng banner --}}
                 @php
                     $posClass = bannerTextPositionClass($banner['position'] ?? null);
-                    $mode     = $banner['mode'] ?? 'full';
-                    $overlay  = $banner['overlay'] ?? true;
+                    $mode = $banner['mode'] ?? 'full';
+                    $overlay = $banner['overlay'] ?? true;
                     $overlayClass = $overlay ? 'bg-black/20 md:bg-black/10' : 'bg-transparent';
                 @endphp
                 @if ($mode !== 'none')
@@ -51,7 +48,7 @@
                         <div class="max-w-xl md:max-w-2xl text-white space-y-3 md:space-y-4">
                             @if ($mode === 'button_only')
                                 <a href="#"
-                                   class="inline-flex items-center gap-2 bg-white text-gray-900
+                                    class="inline-flex items-center gap-2 bg-white text-gray-900
                                           px-4 md:px-6 py-2 md:py-2.5 rounded-full text-sm md:text-base font-semibold
                                           shadow hover:bg-gray-100 transition">
                                     Mua ngay
@@ -65,7 +62,7 @@
                                     Bộ sưu tập sản phẩm mới, giá tốt mỗi ngày. Mua sắm nhanh chóng, tiện lợi và an toàn.
                                 </p>
                                 <a href="#"
-                                   class="inline-flex items-center gap-2 bg-white text-gray-900
+                                    class="inline-flex items-center gap-2 bg-white text-gray-900
                                           px-4 md:px-6 py-2 md:py-2.5 rounded-full text-sm md:text-base font-semibold
                                           shadow hover:bg-gray-100 transition">
                                     Mua ngay
@@ -80,18 +77,18 @@
 
         {{-- Nút điều hướng trái, phải --}}
         <button type="button"
-                class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20
-                       w-9 h-9 items-center justify-center rounded-full bg-black/35
-                       text-white hover:bg-black/55 transition"
-                data-banner-prev>
+            class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20
+                       w-9 h-9 items-center justify-center rounded-full
+                       text-white transition"
+            data-banner-prev>
             <i class="fa-solid fa-chevron-left text-sm"></i>
         </button>
 
         <button type="button"
-                class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20
-                       w-9 h-9 items-center justify-center rounded-full bg-black/35
-                       text-white hover:bg-black/55 transition"
-                data-banner-next>
+            class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20
+                       w-9 h-9 items-center justify-center rounded-full
+                       text-white transition"
+            data-banner-next>
             <i class="fa-solid fa-chevron-right text-sm"></i>
         </button>
 
@@ -118,9 +115,9 @@
         if (!container) return;
 
         const slides = container.querySelectorAll('[data-banner-slide]');
-        const dots   = container.querySelectorAll('[data-banner-dot]'); // hiện tại không dùng vì đã ẩn dots
-        const prev   = container.querySelector('[data-banner-prev]');
-        const next   = container.querySelector('[data-banner-next]');
+        const dots = container.querySelectorAll('[data-banner-dot]'); // hiện tại không dùng vì đã ẩn dots
+        const prev = container.querySelector('[data-banner-prev]');
+        const next = container.querySelector('[data-banner-next]');
 
         if (!slides.length) return;
 
@@ -195,4 +192,3 @@
         // });
     })();
 </script>
-
