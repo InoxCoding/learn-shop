@@ -1,4 +1,4 @@
-<div class="video-container__video w-[800px] mx-auto">
+<div class="video-container__video mx-auto">
     <iframe class="video-container__video-element" id="theme-yt-video-1" frameborder="0"
     allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerpolicy="strict-origin-when-cross-origin" title="Daily Training of Robots Driven by RL"
