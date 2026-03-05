@@ -21,6 +21,9 @@
         {{-- Auth --}}
         <div class="flex gap-2 items-center">
             @guest
+                <a href="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
                 <a href="{{ route('login') }}"
                     class="cursor-pointer px-4 py-2 text-center">Sign in</i></a>
                 <a href="{{ route('register') }}"
