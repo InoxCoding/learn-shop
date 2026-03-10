@@ -1,5 +1,10 @@
 /* Container */
 .blog-row {
+    /* padding: 60px 80px; */
+    width: 100%;
+    height: 100%;
+    max-width: 2000px; /* tăng chiều rộng */
+    margin: auto;
     padding: 60px 80px;
 }
 
