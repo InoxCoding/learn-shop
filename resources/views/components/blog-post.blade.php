@@ -6,8 +6,7 @@
         </a>
     </h2>
     <div class="article-list article-layout--columns article-layout--one-row">
-        <div class="article cc-animate-init -in cc-animate-complete" data-cc-animate="" data-cc-animate-delay="0.15s"
-            style="">
+        <div class="article cc-animate-init -in cc-animate-complete" data-cc-animate="" data-cc-animate-delay="0.15s" style="">
             <div class="article__inner">
                 <div class="article-image">
                     <a href="/blogs/news/clarification-regarding-unitrees-2025-sales-data">
