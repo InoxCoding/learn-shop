@@ -1,4 +1,4 @@
-<div class="video-container__video w-full max-w-[1745px] mx-auto">
+<div class="video-container__video w-full max-w-[1590px] mx-auto">
     <iframe class="video-container__video-element w-full aspect-video"
         src="https://www.youtube.com/embed/8ClYBtfhkaw"
         frameborder="0"

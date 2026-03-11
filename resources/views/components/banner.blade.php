@@ -78,7 +78,7 @@
         {{-- Nút điều hướng trái, phải --}}
         <button type="button"
             class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-20
-                       w-9 h-9 items-center justify-center rounded-full
+                       w-9 h-9 items-center justify-center
                        text-white transition"
             data-banner-prev>
             <i class="fa-solid fa-chevron-left text-sm"></i>
@@ -86,7 +86,7 @@
 
         <button type="button"
             class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20
-                       w-9 h-9 items-center justify-center rounded-full
+                       w-9 h-9 items-center justify-center
                        text-white transition"
             data-banner-next>
             <i class="fa-solid fa-chevron-right text-sm"></i>

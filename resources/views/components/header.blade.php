@@ -10,7 +10,7 @@
             </a>
 
             {{-- Menu --}}
-            <ul class="hidden md:flex gap-4 font-semibold">
+            <ul class="hidden md:flex gap-4 font-semibold ">
                 <li><a href="#" class="text-gray-500 hover:text-gray-700">Trang chủ</a></li>
                 <li><a href="#" class="text-gray-500 hover:text-gray-700">Sản phẩm</a></li>
                 <li><a href="#" class="text-gray-500 hover:text-gray-700">Giỏ hàng</a></li>

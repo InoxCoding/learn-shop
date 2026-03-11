@@ -14,10 +14,8 @@
     @include('components.social-link')
     @include('components.header')
     @include('components.banner')
-    {{-- Nội dung chính --}}
     <main class="flex-grow">
         @yield('content')
-        ĐÂY LÀ NỘI DUNG CHÍNH
     </main>
     @include('components.play-control-background')
     @include('components.blog-post')
