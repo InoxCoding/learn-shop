@@ -8,34 +8,46 @@
 </p>
 
 ## Installation
+
 **Package**: node_modules
+
 ```shell
 npm install
 npm run dev
 ```
+
 **Package**: vendor
+
 ```shell
 composer install
 ```
+
 ## Enviroment Setup
+
 ```shell
 cp .env.example .env
 php artisan key:generate
 ```
+
 Open the .env file and set your database
+
 ```shell
-DB_CONNECTION=pgsql
+DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
-DB_PORT=pgsql
+DB_PORT=3306
 DB_DATABASE=shop
-DB_USERNAME=postgres
+DB_USERNAME=root
 DB_PASSWORD=
 ```
+
 **Run Migrations & Seeders**
+
 ```shell
 php artisan migrate --seed
 ```
+
 **Start server**
+
 ```shell
 php artisan serve
 ```
